@@ -1,0 +1,503 @@
+@font-face {
+  font-family: "sf-pro-regular";
+  src: url(font/sf-pro/sf-pro-regular.OTF);
+}
+@font-face {
+  font-family: "space-tech-italic";
+  src: url(font/space-tech/space-tech-italic.ttf);
+}
+
+:root {
+  --clr-body-bg: linear-gradient(to right, #f0f2f5, #f0f2f5);
+  --clr-nav-text: rgb(240, 242, 245);
+  --clr-nav-bg: rgb(24, 119, 242);
+  --clr-card-bg: rgb(255, 255, 255);
+  --clr-card-border: rgba(154, 156, 158, 0.5);
+  --clr-text: rgb(5, 5, 5);
+  --clr-status-text: rgb(5, 5, 5);
+  --clr-btn-text: rgb(240, 242, 245);
+  --clr-btn-bg: rgb(24, 119, 242);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(144, 148, 156);
+  --clr-btn-border-fcs: 1px solid rgb(144, 148, 156);
+  --clr-link: rgb(5, 5, 5);
+  --clr-link-fcs: rgb(24, 119, 242);
+  --clr-rates-th-bg: rgb(255, 255, 255);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgb(228, 230, 235),
+    rgb(228, 230, 235)
+  );
+  --clr-rates-th-text: rgb(5, 5, 5);
+  --clr-rates-td-text: rgba(5, 5, 5, 0.8);
+  --clr-rates-sup: rgb(24, 119, 242);
+  --clr-brand-text: rgb(5, 5, 5);
+  --clr-phdr-text: rgb(144, 148, 156);
+  --clr-phdr-text-fcs: rgba(144, 148, 156, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(154, 156, 158, 0.5);
+  --clr-input-border-fcs: rgb(24, 119, 242);
+  --clr-input-text: rgb(5, 5, 5);
+  --clr-osi-text: rgb(144, 148, 156);
+  --clr-osi-border: rgba(154, 156, 158, 0.5);
+  --clr-banner-span: rgb(5, 5, 5);
+  --clr-music-marq: rgb(5, 5, 5);
+}
+
+.auto-grid {
+  --min-column-size: 225px;
+
+  display: grid;
+  gap: clamp(1rem, 5vmax, 1.625rem);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--min-column-size)), 1fr)
+  );
+}
+
+.wrapper {
+  --max-width: 55rem;
+  width: min(100% - 0rem, var(--max-width));
+  margin-inline: auto;
+}
+
+.card {
+  color: var(--clr-text);
+  background-color: var(--clr-card-bg);
+  border: 1.5px solid var(--clr-card-border);
+}
+
+.card > * {
+  margin: 0;
+}
+
+.card > *:not(:last-child) {
+  margin-bottom: 0rem;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.color-picker > fieldset {
+  display: flex;
+  gap: 1.9rem;
+  width: fit-content;
+  padding: 1rem 1rem;
+  margin-inline: auto;
+  border-radius: 2rem 2rem 2rem 2rem;
+}
+
+.color-picker input[type="radio"] {
+  appearance: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  outline: 4px solid var(--radio-color, currentColor);
+  outline-offset: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.color-picker input[type="radio"]:active {
+  transform: scale(0.9);
+}
+
+.color-picker input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+.color-picker input[type="radio"]#default {
+  --radio-color: #f0f2f5;
+}
+.color-picker input[type="radio"]#dark {
+  --radio-color: #434343;
+}
+.color-picker input[type="radio"]#blue {
+  --radio-color: #2a5298;
+}
+.color-picker input[type="radio"]#green {
+  --radio-color: #51814c;
+}
+.color-picker input[type="radio"]#purple {
+  --radio-color: #9733ee;
+}
+.color-picker input[type="radio"]#pink {
+  --radio-color: #e04ab2;
+}
+
+.dark {
+  --clr-body-bg: linear-gradient(to right, #434343, #353535);
+  --clr-nav-text: rgb(174, 177, 179);
+  --clr-nav-bg: rgb(35, 37, 38);
+  --clr-card-bg: rgb(35, 37, 38);
+  --clr-card-border: none;
+  --clr-text: rgb(174, 177, 179);
+  --clr-status-text: rgb(211, 211, 211);
+  --clr-btn-text: rgb(174, 177, 179);
+  --clr-btn-bg: rgb(35, 37, 38);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(35, 37, 38);
+  --clr-btn-border-fcs: none;
+  --clr-link: rgb(211, 211, 211);
+  --clr-link-fcs: rgb(13, 201, 1);
+  --clr-rates-th-bg: rgb(35, 37, 38);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgba(35, 37, 38, 0.3),
+    rgba(35, 37, 38, 0.3)
+  );
+  --clr-rates-th-text: rgb(174, 177, 179);
+  --clr-rates-td-text: rgb(211, 211, 211);
+  --clr-rates-sup: rgb(13, 201, 1);
+  --clr-brand-text: rgb(211, 211, 211);
+  --clr-phdr-text: rgb(174, 177, 179);
+  --clr-phdr-text-fcs: rgba(174, 177, 179, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(211, 211, 211, 0.5);
+  --clr-input-border-fcs: rgb(211, 211, 211);
+  --clr-input-text: rgb(255, 255, 255);
+  --clr-osi-text: rgb(174, 177, 179);
+  --clr-osi-border: rgba(211, 211, 211, 0.5);
+  --clr-banner-span: rgb(174, 177, 179);
+  --clr-music-marq: rgb(211, 211, 211);
+}
+
+.blue {
+  --clr-body-bg: linear-gradient(to right, #2a5298, #1e3c72);
+  --clr-nav-text: rgb(159, 175, 202);
+  --clr-nav-bg: rgb(10, 35, 81);
+  --clr-card-bg: rgb(10, 35, 81);
+  --clr-card-border: none;
+  --clr-text: rgb(159, 175, 202);
+  --clr-status-text: rgb(211, 211, 211);
+  --clr-btn-text: rgb(159, 175, 202);
+  --clr-btn-bg: rgb(10, 35, 81);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(10, 35, 81);
+  --clr-btn-border-fcs: none;
+  --clr-link: rgb(211, 211, 211);
+  --clr-link-fcs: rgb(13, 201, 1);
+  --clr-rates-th-bg: rgb(10, 35, 81);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgba(10, 35, 81, 0.3),
+    rgba(10, 35, 81, 0.3)
+  );
+  --clr-rates-th-text: rgb(159, 175, 202);
+  --clr-rates-td-text: rgb(211, 211, 211);
+  --clr-rates-sup: rgb(13, 201, 1);
+  --clr-brand-text: rgb(211, 211, 211);
+  --clr-phdr-text: rgb(159, 175, 202);
+  --clr-phdr-text-fcs: rgba(159, 175, 202, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(211, 211, 211, 0.5);
+  --clr-input-border-fcs: rgb(211, 211, 211);
+  --clr-input-text: rgb(255, 255, 255);
+  --clr-osi-text: rgb(159, 175, 202);
+  --clr-osi-border: rgba(211, 211, 211, 0.5);
+  --clr-banner-span: rgb(159, 175, 202);
+  --clr-music-marq: rgb(211, 211, 211);
+}
+
+.green {
+  --clr-body-bg: linear-gradient(to right, #51814c, #386f32);
+  --clr-nav-text: rgb(171, 194, 168);
+  --clr-nav-bg: rgb(7, 76, 0);
+  --clr-card-bg: rgb(7, 76, 0);
+  --clr-card-border: none;
+  --clr-text: rgb(171, 194, 168);
+  --clr-status-text: rgb(211, 211, 211);
+  --clr-btn-text: rgb(171, 194, 168);
+  --clr-btn-bg: rgb(7, 76, 0);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(7, 76, 0);
+  --clr-btn-border-fcs: none;
+  --clr-link: rgb(211, 211, 211);
+  --clr-link-fcs: rgb(13, 201, 1);
+  --clr-rates-th-bg: rgb(7, 76, 0);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgba(7, 76, 0, 0.3),
+    rgba(7, 76, 0, 0.3)
+  );
+  --clr-rates-th-text: rgb(171, 194, 168);
+  --clr-rates-td-text: rgb(211, 211, 211);
+  --clr-rates-sup: rgb(13, 201, 1);
+  --clr-brand-text: rgb(211, 211, 211);
+  --clr-phdr-text: rgb(171, 194, 168);
+  --clr-phdr-text-fcs: rgba(171, 194, 168, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(211, 211, 211, 0.5);
+  --clr-input-border-fcs: rgb(211, 211, 211);
+  --clr-input-text: rgb(255, 255, 255);
+  --clr-osi-text: rgb(171, 194, 168);
+  --clr-osi-border: rgba(211, 211, 211, 0.5);
+  --clr-banner-span: rgb(171, 194, 168);
+  --clr-music-marq: rgb(211, 211, 211);
+}
+
+.purple {
+  --clr-body-bg: linear-gradient(to right, #9733ee, #663399);
+  --clr-nav-text: rgb(218, 193, 226);
+  --clr-nav-bg: rgb(65, 41, 90);
+  --clr-card-bg: rgb(65, 41, 90);
+  --clr-card-border: none;
+  --clr-text: rgb(218, 193, 226);
+  --clr-status-text: rgb(211, 211, 211);
+  --clr-btn-text: rgb(218, 193, 226);
+  --clr-btn-bg: rgb(65, 41, 90);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(65, 41, 90);
+  --clr-btn-border-fcs: none;
+  --clr-link: rgb(211, 211, 211);
+  --clr-link-fcs: rgb(13, 201, 1);
+  --clr-rates-th-bg: rgb(65, 41, 90);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgba(65, 41, 90, 0.3),
+    rgba(65, 41, 90, 0.3)
+  );
+  --clr-rates-th-text: rgb(218, 193, 226);
+  --clr-rates-td-text: rgb(211, 211, 211);
+  --clr-rates-sup: rgb(13, 201, 1);
+  --clr-brand-text: rgb(211, 211, 211);
+  --clr-phdr-text: rgb(218, 193, 226);
+  --clr-phdr-text-fcs: rgba(218, 193, 226, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(211, 211, 211, 0.5);
+  --clr-input-border-fcs: rgb(211, 211, 211);
+  --clr-input-text: rgb(255, 255, 255);
+  --clr-osi-text: rgb(218, 193, 226);
+  --clr-osi-border: rgba(211, 211, 211, 0.5);
+  --clr-banner-span: rgb(218, 193, 226);
+  --clr-music-marq: rgb(211, 211, 211);
+}
+
+.pink {
+  --clr-body-bg: linear-gradient(to right, #e04ab2, #c03381);
+  --clr-nav-text: rgb(242, 182, 224);
+  --clr-nav-bg: rgb(170, 7, 107);
+  --clr-card-bg: rgb(170, 7, 107);
+  --clr-card-border: none;
+  --clr-text: rgb(242, 182, 224);
+  --clr-status-text: rgb(211, 211, 211);
+  --clr-btn-text: rgb(242, 182, 224);
+  --clr-btn-bg: rgb(170, 7, 107);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(170, 7, 107);
+  --clr-btn-border-fcs: none;
+  --clr-link: rgb(211, 211, 211);
+  --clr-link-fcs: rgb(13, 201, 1);
+  --clr-rates-th-bg: rgb(170, 7, 107);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgba(170, 7, 107, 0.3),
+    rgba(170, 7, 107, 0.3)
+  );
+  --clr-rates-th-text: rgb(242, 182, 224);
+  --clr-rates-td-text: rgb(211, 211, 211);
+  --clr-rates-sup: rgb(13, 201, 1);
+  --clr-brand-text: rgb(211, 211, 211);
+  --clr-phdr-text: rgb(242, 182, 224);
+  --clr-phdr-text-fcs: rgba(242, 182, 224, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(211, 211, 211, 0.5);
+  --clr-input-border-fcs: rgb(211, 211, 211);
+  --clr-input-text: rgb(255, 255, 255);
+  --clr-osi-text: rgb(242, 182, 224);
+  --clr-osi-border: rgba(211, 211, 211, 0.5);
+  --clr-banner-span: rgb(242, 182, 224);
+  --clr-music-marq: rgb(211, 211, 211);
+}
+
+:root:has(#dark:checked) {
+  --clr-body-bg: linear-gradient(to right, #434343, #353535);
+  --clr-nav-text: rgb(174, 177, 179);
+  --clr-nav-bg: rgb(35, 37, 38);
+  --clr-card-bg: rgb(35, 37, 38);
+  --clr-card-border: none;
+  --clr-text: rgb(174, 177, 179);
+  --clr-status-text: rgb(211, 211, 211);
+  --clr-btn-text: rgb(174, 177, 179);
+  --clr-btn-bg: rgb(35, 37, 38);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(35, 37, 38);
+  --clr-btn-border-fcs: none;
+  --clr-link: rgb(211, 211, 211);
+  --clr-link-fcs: rgb(13, 201, 1);
+  --clr-rates-th-bg: rgb(35, 37, 38);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgba(35, 37, 38, 0.3),
+    rgba(35, 37, 38, 0.3)
+  );
+  --clr-rates-th-text: rgb(174, 177, 179);
+  --clr-rates-td-text: rgb(211, 211, 211);
+  --clr-rates-sup: rgb(13, 201, 1);
+  --clr-brand-text: rgb(211, 211, 211);
+  --clr-phdr-text: rgb(174, 177, 179);
+  --clr-phdr-text-fcs: rgba(174, 177, 179, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(211, 211, 211, 0.5);
+  --clr-input-border-fcs: rgb(211, 211, 211);
+  --clr-input-text: rgb(255, 255, 255);
+  --clr-osi-text: rgb(174, 177, 179);
+  --clr-osi-border: rgba(211, 211, 211, 0.5);
+  --clr-banner-span: rgb(174, 177, 179);
+  --clr-music-marq: rgb(211, 211, 211);
+}
+
+:root:has(#blue:checked) {
+  --clr-body-bg: linear-gradient(to right, #2a5298, #1e3c72);
+  --clr-nav-text: rgb(159, 175, 202);
+  --clr-nav-bg: rgb(10, 35, 81);
+  --clr-card-bg: rgb(10, 35, 81);
+  --clr-card-border: none;
+  --clr-text: rgb(159, 175, 202);
+  --clr-status-text: rgb(211, 211, 211);
+  --clr-btn-text: rgb(159, 175, 202);
+  --clr-btn-bg: rgb(10, 35, 81);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(10, 35, 81);
+  --clr-btn-border-fcs: none;
+  --clr-link: rgb(211, 211, 211);
+  --clr-link-fcs: rgb(13, 201, 1);
+  --clr-rates-th-bg: rgb(10, 35, 81);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgba(10, 35, 81, 0.3),
+    rgba(10, 35, 81, 0.3)
+  );
+  --clr-rates-th-text: rgb(159, 175, 202);
+  --clr-rates-td-text: rgb(211, 211, 211);
+  --clr-rates-sup: rgb(13, 201, 1);
+  --clr-brand-text: rgb(211, 211, 211);
+  --clr-phdr-text: rgb(159, 175, 202);
+  --clr-phdr-text-fcs: rgba(159, 175, 202, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(211, 211, 211, 0.5);
+  --clr-input-border-fcs: rgb(211, 211, 211);
+  --clr-input-text: rgb(255, 255, 255);
+  --clr-osi-text: rgb(159, 175, 202);
+  --clr-osi-border: rgba(211, 211, 211, 0.5);
+  --clr-banner-span: rgb(159, 175, 202);
+  --clr-music-marq: rgb(211, 211, 211);
+}
+
+:root:has(#green:checked) {
+  --clr-body-bg: linear-gradient(to right, #51814c, #386f32);
+  --clr-nav-text: rgb(171, 194, 168);
+  --clr-nav-bg: rgb(7, 76, 0);
+  --clr-card-bg: rgb(7, 76, 0);
+  --clr-card-border: none;
+  --clr-text: rgb(171, 194, 168);
+  --clr-status-text: rgb(211, 211, 211);
+  --clr-btn-text: rgb(171, 194, 168);
+  --clr-btn-bg: rgb(7, 76, 0);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(7, 76, 0);
+  --clr-btn-border-fcs: none;
+  --clr-link: rgb(211, 211, 211);
+  --clr-link-fcs: rgb(13, 201, 1);
+  --clr-rates-th-bg: rgb(7, 76, 0);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgba(7, 76, 0, 0.3),
+    rgba(7, 76, 0, 0.3)
+  );
+  --clr-rates-th-text: rgb(171, 194, 168);
+  --clr-rates-td-text: rgb(211, 211, 211);
+  --clr-rates-sup: rgb(13, 201, 1);
+  --clr-brand-text: rgb(211, 211, 211);
+  --clr-phdr-text: rgb(171, 194, 168);
+  --clr-phdr-text-fcs: rgba(171, 194, 168, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(211, 211, 211, 0.5);
+  --clr-input-border-fcs: rgb(211, 211, 211);
+  --clr-input-text: rgb(255, 255, 255);
+  --clr-osi-text: rgb(171, 194, 168);
+  --clr-osi-border: rgba(211, 211, 211, 0.5);
+  --clr-banner-span: rgb(171, 194, 168);
+  --clr-music-marq: rgb(211, 211, 211);
+}
+
+:root:has(#purple:checked) {
+  --clr-body-bg: linear-gradient(to right, #9733ee, #663399);
+  --clr-nav-text: rgb(218, 193, 226);
+  --clr-nav-bg: rgb(65, 41, 90);
+  --clr-card-bg: rgb(65, 41, 90);
+  --clr-card-border: none;
+  --clr-text: rgb(218, 193, 226);
+  --clr-status-text: rgb(211, 211, 211);
+  --clr-btn-text: rgb(218, 193, 226);
+  --clr-btn-bg: rgb(65, 41, 90);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(65, 41, 90);
+  --clr-btn-border-fcs: none;
+  --clr-link: rgb(211, 211, 211);
+  --clr-link-fcs: rgb(13, 201, 1);
+  --clr-rates-th-bg: rgb(65, 41, 90);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgba(65, 41, 90, 0.3),
+    rgba(65, 41, 90, 0.3)
+  );
+  --clr-rates-th-text: rgb(218, 193, 226);
+  --clr-rates-td-text: rgb(211, 211, 211);
+  --clr-rates-sup: rgb(13, 201, 1);
+  --clr-brand-text: rgb(211, 211, 211);
+  --clr-phdr-text: rgb(218, 193, 226);
+  --clr-phdr-text-fcs: rgba(218, 193, 226, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(211, 211, 211, 0.5);
+  --clr-input-border-fcs: rgb(211, 211, 211);
+  --clr-input-text: rgb(255, 255, 255);
+  --clr-osi-text: rgb(218, 193, 226);
+  --clr-osi-border: rgba(211, 211, 211, 0.5);
+  --clr-banner-span: rgb(218, 193, 226);
+  --clr-music-marq: rgb(211, 211, 211);
+}
+
+:root:has(#pink:checked) {
+  --clr-body-bg: linear-gradient(to right, #e04ab2, #c03381);
+  --clr-nav-text: rgb(242, 182, 224);
+  --clr-nav-bg: rgb(170, 7, 107);
+  --clr-card-bg: rgb(170, 7, 107);
+  --clr-card-border: none;
+  --clr-text: rgb(242, 182, 224);
+  --clr-status-text: rgb(211, 211, 211);
+  --clr-btn-text: rgb(242, 182, 224);
+  --clr-btn-bg: rgb(170, 7, 107);
+  --clr-btn-bg-fcs: rgb(255, 255, 255);
+  --clr-btn-text-fcs: rgb(170, 7, 107);
+  --clr-btn-border-fcs: none;
+  --clr-link: rgb(211, 211, 211);
+  --clr-link-fcs: rgb(13, 201, 1);
+  --clr-rates-th-bg: rgb(170, 7, 107);
+  --clr-rates-td-bg: linear-gradient(
+    135deg,
+    rgba(170, 7, 107, 0.3),
+    rgba(170, 7, 107, 0.3)
+  );
+  --clr-rates-th-text: rgb(242, 182, 224);
+  --clr-rates-td-text: rgb(211, 211, 211);
+  --clr-rates-sup: rgb(13, 201, 1);
+  --clr-brand-text: rgb(211, 211, 211);
+  --clr-phdr-text: rgb(242, 182, 224);
+  --clr-phdr-text-fcs: rgba(242, 182, 224, 0.4);
+  --clr-input-bg: transparent;
+  --clr-input-border: rgba(211, 211, 211, 0.5);
+  --clr-input-border-fcs: rgb(211, 211, 211);
+  --clr-input-text: rgb(255, 255, 255);
+  --clr-osi-text: rgb(242, 182, 224);
+  --clr-osi-border: rgba(211, 211, 211, 0.5);
+  --clr-banner-span: rgb(242, 182, 224);
+  --clr-music-marq: rgb(211, 211, 211);
+}

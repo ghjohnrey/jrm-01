@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" href="./swiper.css" type="text/css" />
+    <link rel="stylesheet" href="./popslides.css" type="text/css" />
+    <link rel="stylesheet" href="./sliding-img.css" type="text/css" />
+    <link rel="stylesheet" href="./theme.css" type="text/css" />
+    <link rel="stylesheet" href="./music-loading.css" type="text/css" />
+    <link rel="stylesheet" href="./typing.css" type="text/css" />
+    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" defer src="./hidden.js"></script>
+    <script type="text/javascript" src="./theme.js"></script>
+   <!--  <script type="text/javascript" src="./typing.js" defer></script> -->
+  </head>
+  <body class="portal disable-text-selection">
+    <!-- Start of Preloader -->
+    <div id="preloader">
+      <img src="./LOGO.gif" alt="" />
+      <!-- <p></p> -->
+      <div class="cssload-jumping">
+        <span></span><span></span><span></span><span></span><span></span>	
+      </div>
+    </div>
+    <!-- End of Preloader -->
+
+    <!-- Start of PopUp Message -->
+    <div class="popup">
+      <div class="popup-content">
+        <div class="poplogo">
+          <img src="./LOGO.gif" alt="" />
+          <!-- <p></p> -->
+        </div>
+        <!-- <div class="popsmile">
+          <img src="main-img/smile.png" alt="" />
+        </div> -->
+
+ <!--        <br /> -->
+
+        <div class="poptagline">
+          <p>Available ang voucher</p> <p>sa Tindahan ni Aling Mila,</p> <p>tapat ng AUB Building</p>
+          <!-- <p>You Stay Connected.</p> -->
+        </div>
+
+<!--         <br /> -->
+        <div class="banner-container">
+          <div class="banner rainbow-box">
+            <div class="shoe">
+              <div id="slider_pop">
+                <figure>
+                  <img src="popimg/wifiprice.png" alt="" />
+                  <img src="popimg/tnamfront.png" alt="" />
+                  <img src="popimg/tnamloc.png" alt="" />
+                  <img src="popimg/tnamfront.png" alt="" />
+                  <img src="popimg/wifiprice.png" alt="" />
+                </figure>
+              </div>
+              <div class="content">
+                <p>jrm prepaid wifi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <br /> -->
+
+        <label for="voucherCode">
+          <div onclick="audio2.play()" class="popclose">
+            <p>Go to Log In</p>
+          </div>
+		  <div>
+           <!--  <br /> -->
+          </div>
+        </label>
+		
+			        <!-- Start of Rates -->
+					<br />
+        <table class="promo-glass">
+          <thead>
+            <tr>
+              <th colspan="3">
+                <marquee scrollamount="3">
+                  DAILY PROMO &nbsp; &nbsp; DAILY PROMO &nbsp; &nbsp; 
+                  DAILY PROMO &nbsp; &nbsp; DAILY PROMO &nbsp; &nbsp; 
+                  DAILY PROMO &nbsp; &nbsp; DAILY PROMO &nbsp; &nbsp; 
+                  DAILY PROMO &nbsp; &nbsp; DAILY PROMO
+                </marque>
+              </th>
+            </tr>
+            <tr class="promo-thead">
+              <th>PRICE</th>
+              <th>TIME</th>
+              <!-- <th>VALID</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="most-popular">
+                <b><sup>BEST CHOICE!</sup></b><br />
+                <b>&#x20B1; 10.00</b>
+              </td>
+              <td><b>12 hours</b></td>
+              <!-- <td><b>5 days</b></td> -->
+            </tr>
+            <!-- <tr>
+              <td>
+                <b>&#x20B1; 50.00</b>
+              </td>
+              <td><b>7 days</b></td>
+              <td><b>10 days</b></td>
+            </tr> -->
+            <!-- <tr>
+              <td>
+                <b>&#x20B1; 100.00</b>
+              </td>
+              <td><b>16 days</b></td>
+              <td><b>40 days</b></td>
+            </tr> -->
+          </tbody>
+          <tfoot>
+            <tr class="promo-tfoot">
+              <th colspan="3">While Supplies Last</th>
+            </tr>
+          </tfoot>
+        </table>
+        <!-- End of Rates -->
+      </div>
+    </div>
+	
+
+
+    <script>
+      const popup = document.querySelector(".popup");
+      const x = document.querySelector(".popup-content .popclose");
+
+      window.addEventListener("load", () => {
+        popup.classList.add("showPopup");
+        popup.childNodes[1].classList.add("showPopup");
+      });
+      x.addEventListener("click", () => {
+        popup.classList.remove("showPopup");
+        popup.childNodes[1].classList.remove("showPopup");
+      });
+    </script>
+
+    <script type="text/javascript">
+      const audio2 = new Audio();
+      audio2.src = "./music.ogg";
+    </script>
+    <!-- End of PopUp Message -->
+
+    <main>
+      <div class="wrapper">
+        <div>
+          <div class="hidden navbar">
+            <!-- Start of Brand/Logo/Name -->
+            <div class="logo">
+              <p>jrm prepaid wifi</p>
+            </div>
+            <!-- End of Brand/Logo/Name -->
+
+            <!-- Music Loading -->
+            <div class="animations">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <!-- Music Loading -->
+
+            <h1><span></span></h1>
+
+            <!-- Start of Menu Buttons -->
+            <div>
+              <a href="#sponsors" class="btn fourth">
+                <img src="menu-img/sponsors.png" alt="" />
+              </a>
+              <a href="#contacts" class="btn third">
+                <img src="menu-img/contacts.png" alt="" />
+              </a>
+              <a href="#faq" class="btn second">
+                <img src="menu-img/faq.png" alt="" />
+              </a>
+              <a href="#rates" class="btn first">
+                <img src="menu-img/rates.png" alt="" />
+              </a>
+            </div>
+            <!-- End of Menu Buttons -->
+          </div>
+
+          <!-- Start of Sliding Image -->
+          <div class="hidden slidingImage">
+            <div class="slider">
+              <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio2" />
+                <input type="radio" name="radio-btn" id="radio3" />
+                <input type="radio" name="radio-btn" id="radio4" />
+                <input type="radio" name="radio-btn" id="radio5" />
+
+
+                <div class="slide first">
+                  <img src="popimg/wifiprice.png" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="main-img/sliding-img/ML.png" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="main-img/sliding-img/FB.png" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="popimg/wifiprice.png" alt="" />
+                </div>
+                <div class="slide">
+                  <img src="main-img/sliding-img/ML.png" alt="" />
+                </div>
+				<div class="slide">
+                  <img src="main-img/sliding-img/FB.png" alt="" />
+                </div>
+
+                <div class="navigation-auto">
+                  <div class="auto-btn1"></div>
+                  <div class="auto-btn2"></div>
+                  <div class="auto-btn3"></div>
+                  <div class="auto-btn4"></div>
+                  <div class="auto-btn5"></div>
+                </div>
+              </div>
+            </div>
+
+            <script type="text/javascript">
+              var counter = 1;
+              setInterval(function () {
+                document.getElementById("radio" + counter).checked = true;
+                counter++;
+                if (counter > 5) {
+                  counter = 1;
+                  setInterval = 1000;
+                }
+              }, 10000);
+            </script>
+          </div>
+          <!-- End of Sliding Image -->
+
+          <!-- Color Themes -->
+          <form class="hidden color-picker" action="">
+            <fieldset class="card">
+              <legend class="visually-hidden">Pick a color scheme</legend>
+              <label for="default" class="visually-hidden">White</label>
+              <input type="radio" name="theme" id="default" checked />
+
+              <label for="dark" class="visually-hidden">Dark</label>
+              <input type="radio" id="dark" name="theme" />
+
+              <label for="blue" class="visually-hidden">Blue</label>
+              <input type="radio" id="blue" name="theme" />
+
+              <label for="green" class="visually-hidden">Green</label>
+              <input type="radio" id="green" name="theme" />
+
+              <label for="purple" class="visually-hidden">Purple</label>
+              <input type="radio" id="purple" name="theme" />
+
+              <label for="pink" class="visually-hidden">Pink</label>
+              <input type="radio" id="pink" name="theme" />
+            </fieldset>
+          </form>
+          <!-- Color Themes -->
+
+          <!-- <br /> -->
+
+          <!-- Start of Welcome -->
+          <div class="animated-text">
+            <div class="line">HI, THERE!</div>
+            <div class="line">WELCOME</div>
+            <div class="line">TO JRM PREPAID WIFI</div>
+            </div>
+			 <br />
+          <!-- End of Welcome -->
+
+          <!-- Start of Instruction -->
+          <div>
+            <p class="blink">Enter the Voucher Code then click Connect to Network</p>
+            </div>
+          <!-- End of Instruction -->
+
+          <!-- Start of Back to Top -->
+          <div class="arrow">
+            <a class="hidden" href="#" title="Back to Top">
+              <img src="main-img/back-to-top.png" alt="" />
+            </a>
+          </div>
+          <!-- End of Back to Top -->
+
+          <!-- <table class="music-marq">
+            <tr>
+              <th>
+                <marquee Scrollamount="3">
+                  Now Playing : &nbsp; &#127911; Blank Space &nbsp; - &nbsp;
+                  Taylor Swift
+                </marquee>
+              </th>
+            </tr>
+          </table> -->
+
+          <br />
+
+          <div class="form-box glass">
+		  <p id="datetime" style="color: green;"></p>
+            <!-- Start of Omada Buttons -->
+            <table>
+              <tr>
+                <div class="oper-section-outer">
+                  <div class="oper-section-inner">
+                    <div class="hidden status">
+                      <p class="blink" id="oper-hint" style="color: red;">Pending</p>
+                    </div>
+
+                    <br />
+
+                    <div id="hotspot-section">
+                      <select
+                        id="hotspot-selector"
+                        class="hidden oper-section-item"
+                      ></select>
+                    </div>
+                    <form id="login-form">
+                      <div id="input-voucher">
+                        <input
+                          id="voucherCode"
+                          class="hidden oper-section-item input"
+                          name="voucherCode"
+                          type="text"
+                          required
+                          placeholder="Enter Voucher Code here"
+                        />
+                      </div>
+                      <div id="input-user">
+                        <input
+                          id="username"
+                          class="hidden oper-section-item input"
+                          name="username"
+                          type="text"
+                          required
+                          placeholder="Username"
+                        />
+                      </div>
+                      <div id="input-password" class="user-input">
+                        <input
+                          id="password"
+                          class="hidden oper-section-item input"
+                          name="password"
+                          type="password"
+                          required
+                          placeholder="Password"
+                        />
+                      </div>
+                      <div id="input-simple">
+                        <input
+                          id="simplePassword"
+                          class="hidden input password oper-section-item"
+                          name="simplePassword"
+                          type="password"
+                          required
+                          placeholder="Password"
+                        />
+                      </div>
+                      <div id="input-phone-num">
+                        <span class="hidden add">+</span
+                        ><input
+                          id="country-code"
+                          class="hidden card input"
+                        /><input
+                          id="phone-number"
+                          class="hidden input"
+                          name="phone-number"
+                          type="text"
+                          required
+                          placeholder="Phone Number"
+                        />
+                      </div>
+                      <div id="input-verify-code">
+                        <input
+                          id="verify-code"
+                          class="hidden input"
+                          name="verify-code"
+                          type="text"
+                          required
+                          placeholder="Verification Code"
+                        /><button id="get-code" class="hidden button">
+                          Get Code
+                        </button>
+                      </div>
+                      <input name="clientMac" id="cMac" style="display: none" />
+                      <input
+                        name="radiusSvrIp"
+                        id="radiusServerIp"
+                        style="display: none"
+                      />
+                      <div id="button-area">
+                        <button
+                          id="button-facebook"
+                          onclick="audio.play()"
+                          class="hidden button oper-section-item"
+                          type="submit"
+                        >
+                          <p>Facebook</p>
+                        </button>
+                        <button
+                          id="button-login"
+                          onclick="audio.play()"
+                          class="hidden button oper-section-item"
+                          type="submit"
+                        >
+                          <p>Connect to Network</p>
+                        </button>
+                        <br />
+						<table class="hidden marscroll">
+            <tr>
+              <th>
+                <marquee Scrollamount="3">
+                  Now Playing : &nbsp; &#127911; Rise to the Top &nbsp; - &nbsp;
+                  MLBB M3 Themesong
+                </marquee>
+              </th>
+            </tr>
+          </table>
+                        <!-- <label
+                          id="change-text"
+                          class="input-link"
+                          for="voucherCode"
+                          >Forgot voucher code?</label
+                        > -->
+                        <script type="text/javascript">
+                          const audio = new Audio();
+                          audio.src = "./login.mp3";
+                        </script>
+                        <!-- <script type="text/javascript">
+                          const changeText =
+                            document.querySelector("#change-text");
+
+                          changeText.addEventListener("click", function () {
+                            changeText.textContent =
+                              "Check recently used voucher codes.";
+                          });
+                        </script> -->
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </tr>
+            </table>
+            <!-- End of Omada Buttons -->
+          </div>
+        </div>
+
+        <br />
+
+        <!-- Start of Marquee -->
+        <table class="hidden marscroll">
+          <tr>
+            <th>
+              <marquee Scrollamount="3">
+                <img src="menu-img/scatterbig.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/meralco.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/maynilad.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/aub.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/bayadcenter.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/bdo.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/bpi.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/chrome.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/coc.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/facebook.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/foodpanda.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/gcash.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/gmail.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/google.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/instagram.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/lazada.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/messenger.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/mobilelegends.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/netflix.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/sabongbig.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/scattersmall.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/shopee.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/spotify.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/telegram.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/kfc.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/sabongsmall.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/tiktok.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/unionbank.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/whatsapp.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/x.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/youtube.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src="menu-img/grab.png" alt="" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              </marquee>
+            </th>
+          </tr>
+        </table>
+        <!-- End of Marquee -->
+		<br />
+
+        <!-- Start of Faq -->
+        <ul id="accordion">
+          <!-- <li id="faq" class="hidden card">
+            <label for="first"
+              >Ano po ang gagawin ko upang huminto ang oras sa internet?<span
+                >&#x3e;</span
+              ></label
+            >
+            <input type="radio" name="accordion" id="first" checked />
+            <div class="content">
+              <p>
+                Ang gagawin po upang huminto ang oras sa internet ay patayin
+                (TURN-OFF) ang wifi sa cellphone.
+              </p>
+            </div>
+          </li> -->
+          <li id="faq" class="hidden card">
+            <label for="second"
+              >Saan ako pwedeng bumili ng Voucher Code?<span
+                >&#x3e;</span
+              ></label
+            >
+            <input type="radio" name="accordion" id="second" />
+            <div class="content">
+              <p>Mabibili ang Voucher Code  sa Tindahan ni Aling Mila, tapat ng AUB Building. Makikita rin ang location at image ng harap ng tindahan sa taas ng page na ito.</p>
+            </div>
+          </li>
+          <li class="hidden card">
+            <label for="third"
+              >Paano gamitin ang Voucher Code?<span>&#x3e;</span></label
+            >
+            <input type="radio" name="accordion" id="third" />
+            <div class="content">
+              <p>
+                Ang Voucher Code ay ginagamit upang maka-konek sa JRM Prepaid
+                Wifi. Kopyahin o i-type ang Voucher Code sa box na makikita sa itaas at pagkatapos ay
+                pindutin (PRESS) ang Connect to Network.
+              </p>
+            </div>
+          </li>
+          <li class="hidden card">
+            <label for="fourth"
+              >Ano ang gagawin kapag mabagal/wala ang internet?<span>&#x3e;</span></label
+            >
+            <input type="radio" name="accordion" id="fourth" />
+            <div class="content">
+              <p>
+                I-off at muling i-on ang wifi ng iyong device. Siguraduhing naka connect sa JRM Prepaid Wifi. I-check din kung expired na ang code na ginamit. Kung expired, maaari kang bumili ng voucher code sa Tindahan ni Aling Mila.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <!-- End of Faq -->
+
+        <br />
+
+        <!-- Start of Rates -->
+        <table id="rates" class="hidden rates">
+          <thead>
+            <tr class="thead">
+              <th>PRICE</th>
+              <th>TIME</th>
+              <!-- <th>VALID</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <b>&#x20B1; 10.00</b>
+              </td>
+              <td><b>12 Hours</b></td>
+              <!-- <td><b>1 day</b></td> -->
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="card tfoot">
+              <th colspan="3">UNLIMITED DATA</th>
+            </tr>
+          </tfoot>
+        </table>
+        <!-- End of Rates -->
+
+        <br />
+
+        <!-- Start of Sponsors -->
+        <div id="sponsors" class="hidden card blog-slider">
+          <div class="blog-slider__wrp swiper-wrapper">
+            <div class="blog-slider__item swiper-slide">
+              <div class="card blog-slider__img">
+                <img src="popimg/tnamfront.png" alt="" />
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__head">Located in front of Josefa Building</div>
+				<br />
+                <span class="blog-slider__code"></span>
+                <div class="blog-slider__title">We are searchable online. Google, goggle maps and more!</div>
+                <div class="blog-slider__text">
+                  Our store offers a wide variety of basic essentials that are important for your daily needs. We sell various products such as rice grain, hotdogs, canned goods, plastic cups, seasoning, herbs, and spices, all at very affordable prices. Our store is strategically located for easy access, making it convenient for our customers to visit anytime they need to. We offer both retail and wholesale options for our products, making it easy for you to purchase the exact quantity you need, whether for personal use or business purposes. Our mode of payment is cash, making it easy and hassle-free for you to complete your purchases.
+                </div>
+                <a href="#" class="card blog-slider__button">&#128172; Social Media</a>
+              </div>
+            </div>
+          </div>
+          <div class="blog-slider__pagination"></div>
+        </div>
+
+        <script type="text/javascript" src="./swiper.js"></script>
+        <!-- End of Sponsors -->
+
+        <!-- <br /> -->
+
+        <!-- Start of Banner -->
+		
+        <div class="hidden banner-container">
+          <div class="banner card">
+            <div class="shoe">
+              <img src="popimg/wifiprice.png" alt="" />
+            </div>
+            <div class="content">
+              <span
+                >UNLIMITED <br />
+                DATA & INTERNET</span
+              >
+            </div>
+            <div class="women">
+              <img src="main-img/women.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- End of Banner -->
+
+        <!-- <br /> -->
+
+        <!-- Start of Marquee -->
+        <table class="hidden marscroll">
+          <tr>
+            <th>
+              <marquee Scrollamount="3">
+                &#127911; Music &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#x1F35F; Food &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &#127918; Game &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#128172; Social Media
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &#127916; Movie &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &#128176; Money Transfer &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#128722;
+                Online Shopping
+              </marquee>
+            </th>
+          </tr>
+        </table>
+        <!-- End of Marquee -->
+
+        <!-- Start of Contacts -->
+		
+        <table id="contacts" class="hidden card contacts">
+          <tr>
+            <th>Please feel free to email us at:</th>
+          </tr>
+          <tr>
+            <td>jrmprepaidwifi@gmail.com</td>
+          </tr>
+        </table>
+        <!-- End of Contacts -->
+
+        <br /><br />
+
+        <!-- Start of Brand -->
+        <p class="hidden brand">JRM Prepaid Wifi &#169; 2026</p>
+        <!-- End of Brand -->
+
+        <br /><br />
+		</div>
+    </main>
+	
+	<script>
+    function updateDateTime() {
+        var now = new Date();
+        var datetimeString = now.toLocaleString();
+        document.getElementById("datetime").innerHTML = datetimeString;
+    }
+
+    // Call the function once to display immediately on load
+    updateDateTime();
+
+    // Update the time every second
+    setInterval(updateDateTime, 1000);
+	</script>
+
+    <!-- Start of Preloader JS -->
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+    <!-- End of Preloader JS -->
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/698fd62584b25b1c36052af9/1jhctp130';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  </body>
+</html>
